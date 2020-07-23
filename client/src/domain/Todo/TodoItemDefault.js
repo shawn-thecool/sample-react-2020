@@ -6,9 +6,13 @@ export default function TodoItem({ todo }) {
   const dispatch = useDispatch();
 
   // handlers
-  const updateHndr = (e) =>
-    dispatch(updateTodo({ ...todo, ...{txt: "updated"} }));
-  const deleteHndr = (e) => dispatch(deleteTodo(todo));
+  const updateHndr = (e) => {
+    return dispatch(updateTodo({ ...todo, ...{ txt: "updated" } }));
+  };
+
+  const deleteHndr = (e) => {
+    return dispatch(deleteTodo(todo));
+  };
 
   return (
     <li>
